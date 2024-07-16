@@ -8,35 +8,68 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="/index.js" defer></script>
-    <div class="container-sm pt-5">
-    <div class="card w-100">
-        <div class="card-body text-center">
-            <h5 class="card-title">Ejercicio 1</h5>
-            <p class="card-text">En una clase de 21 alumnos, van a distribuirse 3 premios.</p>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-          <div class="card">
-            <div class="card-body text-center" id="A1B">
-              <h5 class="card-title">A</h5>
-              <p class="card-text">Los premios son iguales.</p>
-              <button class="btn btn-primary" id="A1">Calcular</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body text-center" id="B1B">
-              <h5 class="card-title">B</h5>
-              <p class="card-text">Los premios son diferentes.</p>
-              <button class="btn btn-primary" id="B1">Calcular</button>
-            </div>
-          </div>
-        </div>
+    <script src="index.js" defer></script>
+    <nav class="navbar navbar-dark bg-dark text-light">
+      <div class="mx-2">
+        Angelo Polgrossi - Samuel Molina
       </div>
+      <div class="mx-2">
+        Estructuras Discretas I
+      </div>
+    </nav>
+    <div class="container-sm pt-5">
+      <div class="row">
+          <div class="col-sm-6 mb-4">
+            <div class="card">
+              <div class="card-body text-center" id="fact">
+                <h5 class="card-title">Factorial</h5>
+                <input class="form-control" type="number" placeholder="Número" id="numfact">
+                <br>
+                <button class="btn btn-primary" id="buttonfact">Calcular</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-4">
+            <div class="card">
+              <div class="card-body text-center" id="com">
+                <h5 class="card-title">Combinación</h5>
+                <div class="input-group">
+                  <input class="form-control" type="number" placeholder="Total" id="totalcom">
+                  <input class="form-control" type="number" placeholder="Elegidos" id="elegidoscom">
+                </div>
+                <br>
+                <button class="btn btn-primary" id="buttomcom">Calcular</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body text-center" id="per">
+                <h5 class="card-title">Permutación</h5>
+                <div class="input-group">
+                  <input class="form-control" type="number" placeholder="Total" id="totalper">
+                  <input class="form-control" type="number" placeholder="Elegidos" id="elegidosper">
+                </div>
+                <br>
+                <button class="btn btn-primary" id="buttonper">Calcular</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body text-center" id="perrep">
+                <h5 class="card-title">Permutación con repetición</h5>
+                <div class="input-group">
+                  <input class="form-control" type="number" placeholder="Total" id="totalperrep">
+                  <input class="form-control" type="number" placeholder="Elegidos" id="elegidosperrep">
+                </div>
+                <br>
+                <button class="btn btn-primary" id="buttonperrep">Calcular</button>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="list-group mb-4" id="ejercicios"></div>
     </div>
 </body>
 </html>
