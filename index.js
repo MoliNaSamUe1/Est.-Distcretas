@@ -66,6 +66,7 @@ buttonperrep.addEventListener('click', () => {
 function AddEjercicio(){
     const ejercicios = document.getElementById('ejercicios');
     ejercicios.innerHTML += '<div class="card mt-4"><div class="card-body"><h5 class="card-title">Ejercicio 1</h5><p class="card-text">¿De cuántas maneras pueden sentarse 10 personas en un banco si hay 4 sitios disponibles?</p><p class="card-text">Respuesta: '+permutacion(10,4)+' maneras</p></div></div>';
+    ejercicios.innerHTML += '<div class="card mt-4"><div class="card-body"><h5 class="card-title">Ejercicio 2</h5><p class="card-text">En una clase de 21 alumnos, van a distribuirse tres premios. Averiguar como van a distribuirse si: los premios son diferentes o si los premios son iguales.</p><p class="card-text">Si los premios son diferentes son '+permutacion(21,3)+' maneras</p><p class="card-text">Si los premios son iguales son '+combinacion(21,3)+' maneras</p></div></div>';
     ejercicios.innerHTML += '<div class="card mt-4"><div class="card-body"><h5 class="card-title">Ejercicio 3</h5><p class="card-text">Las diagonales de un polígono se obtienen uniendo pares de vértices no adyacentes.<br> 1) Obtener el número de diagonales del cuadrado, hexágono y decagono.</p><p class="card-text">Cuadrado: <br>-Primero se calculan las uniones posible: '+combinacion(4,2)+'<br>Diagonales: '+(combinacion(4,2)-4)+' diagonales</p><p class="card-text">Hexagono: <br>-Primero se calculan las uniones posible: '+combinacion(6,2)+'<br>Diagonales: '+(combinacion(6,2)-6)+' diagonales</p><p class="card-text">Decagono: <br>-Primero se calculan las uniones posible: '+combinacion(10,2)+'<br>Diagonales: '+(combinacion(10,2)-10)+' diagonales</p></div></div>';
     ejercicios.innerHTML += '<div class="card mt-4"><div class="card-body"><h5 class="card-title">Ejercicio 4</h5><p class="card-text">Hay que colocar a 8 hombres y 7 mujeres en una fila de modo que las mujeres ocupen los lugares pares. De cuantas maneras pueden hacerse?</p><p class="card-text">Formas de colocarse los hombres: '+factorial(8)+'<br>Fomas de colocarse las mujeres: '+factorial(7)+'<br>Respuesta: '+(factorial(8)*factorial(7))+'</p></div></div>';
     ejercicios.innerHTML += '<div class="card mt-4"><div class="card-body"><h5 class="card-title">Ejercicio 5</h5><p class="card-text">Cuantos números de 4 dígitos se pueden formar con las cifras 1,2,…9<br>1) Permitiendo repeticiones <br>2) Sin repeticiones <br>3) Si el ultimo digito ha de ser 1 y no se permiten repeticiones</p><p class="card-text">1) Respuesta: '+(9**4) + '<br>2) Respuesta: '+permutacion(9,4)+'<br> Respuesta: '+combinacion(8,3)+'</p></div></div>';
@@ -84,6 +85,10 @@ AddEjercicio();
 //Ejercicio 1
 console.log("1. ¿De cuántas maneras pueden sentarse 10 personas en un banco si hay 4 sitios disponibles?")
 console.log("Respuesta: "+permutacion(10,4)+" maneras")
+
+console.log("2. En una clase de 21 alumnos, van a distribuirse tres premios. Averiguar como van a distribuirse si: los premios son diferentes o si los premios son iguales.")
+console.log("Si los premios son diferentes son "+permutacion(21,3)+" maneras")
+console.log("Si los premios son iguales son "+combinacion(21,3)+" maneras")
 
 //Ejercicio 3
 console.log("3. Las diagonales de un polígono se obtienen uniendo pares de vértices no adyacentes.\n 1) Obtener el número de diagonales del cuadrado, hexágono y decagono.")
