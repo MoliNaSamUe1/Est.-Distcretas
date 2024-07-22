@@ -38,25 +38,29 @@ var buttonfact = document.getElementById('buttonfact');
 var buttomcom = document.getElementById('buttomcom');
 var buttonper = document.getElementById('buttonper');
 var buttonperrep = document.getElementById('buttonperrep');
+var primero = document.getElementById('primero')
+var segundo = document.getElementById('segundo')
+var tercero = document.getElementById('tercero')
+var cuarto = document.getElementById('cuarto')
 var fact = document.getElementById('fact');
 var com = document.getElementById('com');
 var per = document.getElementById('per');
 var perrep = document.getElementById('perrep');
 
 buttonfact.addEventListener('click', () => {
-    fact.innerHTML += '<p class="fw-bold pt-4 fs-4">' + factorial(parseFloat(document.getElementById('numfact').value)) + " factorial</p>"
+    primero.innerHTML = factorial(parseFloat(document.getElementById('numfact').value)) + " factorial"
 })
 
 buttomcom.addEventListener('click', () => {
-    com.innerHTML += '<p class="fw-bold pt-4 fs-4">' + combinacion(parseFloat(document.getElementById('totalcom').value),parseFloat(document.getElementById('elegidoscom').value)) + " combinaciones</p>"
+    segundo.innerHTML = combinacion(parseFloat(document.getElementById('totalcom').value),parseFloat(document.getElementById('elegidoscom').value)) + " combinaciones"
 })
 
 buttonper.addEventListener('click', () => {
-    per.innerHTML += '<p class="fw-bold pt-4 fs-4">' + permutacion(parseFloat(document.getElementById('totalper').value),parseFloat(document.getElementById('elegidosper').value)) + " permutaciones</p>"
+    tercero.innerHTML = permutacion(parseFloat(document.getElementById('totalper').value),parseFloat(document.getElementById('elegidosper').value)) + " permutaciones"
 })
 
 buttonperrep.addEventListener('click', () => {
-    perrep.innerHTML += '<p class="fw-bold pt-4 fs-4">' + permutacionRep(parseFloat(document.getElementById('totalperrep').value),parseFloat(document.getElementById('elegidosperrep').value)) + " permutaciones con repetición</p>"
+    cuarto.innerHTML = permutacionRep(parseFloat(document.getElementById('totalperrep').value),[parseFloat(document.getElementById('elegidosperrep').value)]) + " permutaciones con repetición"
 })
 
 function AddEjercicio(){
